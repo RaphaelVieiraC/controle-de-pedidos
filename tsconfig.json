@@ -13,12 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "node",
-      "conventional-commits-parser",
-      "estree",
-      "json-schema"
-    ],
+    "types": ["node", "conventional-commits-parser", "estree", "json-schema"],
     "plugins": [
       {
         "name": "next"
