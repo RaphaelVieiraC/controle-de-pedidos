@@ -1,5 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-background text-foreground;
+  font-family: 'Inter', sans-serif;
+
+}
+
 
 @custom-variant dark (&:is(.dark *));
 

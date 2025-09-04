@@ -1,10 +1,13 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "next-themes";
 import "./global.css";
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { App } from './App.tsx'
+import { Navbar } from "./components/navbar";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <Navbar />
+    </ThemeProvider>
+  </React.StrictMode>
 )
