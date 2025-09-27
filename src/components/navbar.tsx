@@ -8,33 +8,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Menu, Moon, Sun } from "lucide-react"
+import { Home, LogIn, Menu, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 export function Navbar() {
   const { setTheme } = useTheme()
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 border-b bg-background shadow-sm">
+    <header className="flex items-center justify-between px-4 py-2 border-b bg-background shadow-sm">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon">
+          <Button variant="outline" size="icon">
             <Menu className="h-6 w-6" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="w-64">
+        <SheetContent side="left" className="w-60">
           <nav className="flex flex-col gap-4 mt-6">
-            <a href="#" className="hover:text-primary">Home</a>
-            <a href="#" className="hover:text-primary">Serviços</a>
-            <a href="#" className="hover:text-primary">Sobre</a>
-            <a href="#" className="hover:text-primary">Contato</a>
+            <a href="#" className="hover:text-primary text-center">Solicitação</a>
           </nav>
         </SheetContent>
       </Sheet>
 
       <div className="text-xl font-bold">Controle de pedidos</div>
 
-      <nav className="hidden md:flex gap-6 items-center">
+      <nav className="hidden md:flex gap-2 items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon">
@@ -56,8 +53,12 @@ export function Navbar() {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <a href="#" className="hover:text-primary">Home</a>
-        <a href="#" className="hover:text-primary">Login</a>
+        <Button variant="outline" size="icon">
+          <Home />
+        </Button>
+        <Button variant="outline" size="icon">
+          <LogIn />
+        </Button>
       </nav>
     </header>
   )
